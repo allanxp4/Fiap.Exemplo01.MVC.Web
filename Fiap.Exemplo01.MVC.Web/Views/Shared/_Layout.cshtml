@@ -18,9 +18,12 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Cadastrar produtos", "Cadastrar", "Produto")</li>
+                    <li>@Html.ActionLink("Listar produtos", "Listar", "Produto")</li>
                 </ul>
             </div>
         </div>
