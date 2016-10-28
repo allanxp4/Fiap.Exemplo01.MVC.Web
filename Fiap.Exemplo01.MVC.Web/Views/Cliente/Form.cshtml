@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+@if (TempData["success"] != null)
+{
+    <br />
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        @model Fiap.Exemplo01.MVC.Web.Models.Cliente
+        Cliente @Model.Nome cadastrado com sucesso.
+    </div>
+}
+<h2>Cadastrar</h2>
+
+<form action="/Cliente/Form" method="post">
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" name="nome" id="cliente.Nome" />
+    </div>
+    <div class="form-group">
+        <label for="idade">Idade</label>
+        <input type="number" class="form-control" name="idade" id="cliente.Idade" />
+    </div>
+    <div class="form-group">
+        <label for="quantidade">Credito</label>
+        <input type="number" step="any" class="form-control" name="credito" id="cliente.Credito" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+
+</form>
+
+
