@@ -1,0 +1,13 @@
+﻿@helper Submit(string value, string className)
+{
+    <input type="submit" value="@value" class="@className" />
+}
+
+@helper Message(string msg)
+{
+    <br />
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Cliente @msg cadastrado com sucesso.
+    </div>
+}

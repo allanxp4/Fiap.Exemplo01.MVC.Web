@@ -5,11 +5,7 @@
 
 @if (TempData["success"] != null)
 {
-    <br />
-    <div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        Cliente @Model.Nome cadastrado com sucesso.
-    </div>
+    @Helper.Message(Model.Nome);
 }
 <h2>Cadastrar</h2>
 
